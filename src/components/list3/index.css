@@ -1,0 +1,98 @@
+.list3_con_Box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.list3_con_box {
+    width: 404px;
+    height: 509px;
+    background: #FAFAFA;
+    box-shadow: 0px 4px 66px rgba(0, 0, 0, 0.16);
+    border-radius: 47px;
+    padding: 20px;
+}
+
+.list3_con_titleImgCla {
+    width: 100%;
+    height: 227px;
+    border-radius: 47px;
+    margin-bottom: 33px;
+    background-size: 100% 100% !important;
+    position: relative;
+}
+
+.list3_con_list6BtnBox {
+    width: 100%;
+    height: 227px;
+    border-radius: 47px;
+    position: absolute;
+    background-color: rgba(35, 37, 43, 0.5);
+}
+
+.list3_con_list6BtnCla {
+    background-color: #FAFAFA;
+    height: 67px;
+    width: 60%;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    border-radius: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list3_con_con1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list3_con_con1Left {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+    text-align: left;
+
+}
+
+.list3_con_con1Right {
+    width: 118px;
+    height: 33px;
+    background-color: #E1EDD9;
+    border-radius: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 33px;
+}
+
+.list3_con_con2 {
+    color: #617587;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    margin-bottom: 10px;
+}
+
+.list3_con_con3 {
+    color: #23252B;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.list3_con_con4 {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.list3_con_userImgCla {
+    width: 40px;
+    height: 40px;
+}
+
+.list3_con_userNameBox {
+    margin-left: 20px;
+}

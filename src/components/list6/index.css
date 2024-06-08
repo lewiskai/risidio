@@ -1,0 +1,81 @@
+.list6_con_Box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.list6_con_box {
+    width: 404px;
+    height: 490px;
+    background: #FAFAFA;
+    box-shadow: 0px 4px 66px rgba(0, 0, 0, 0.16);
+    border-radius: 47px;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.list6_con_list6ImgCla {
+    width: 100%;
+    height: 345px;
+    border-radius: 47px;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    position: relative;
+}
+
+.list6_con_list6BtnBox {
+    width: 100%;
+    height: 345px;
+    border-radius: 47px;
+    position: absolute;
+    background-color: rgba(35, 37, 43, 0.5);
+
+}
+
+.list6_con_list6BtnCla {
+    background-color: #FAFAFA;
+    height: 67px;
+    width: 60%;
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    border-radius: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list6_con_list6ImgCla：hover {
+    width: 200px;
+    height: 100px;
+    background-color: red;
+}
+
+.list6_con_list6ItemBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 60px;
+
+}
+
+.list6_con_list6ItemBoxLeft {
+    color: #000000;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 29.05px;
+}
+
+.list6_con_list6ItemBoxRight {
+    width: 121px;
+    height: 33px;
+    border-radius: 49px;
+    opacity: 0px;
+    background-color: #D4D3EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 500;
+}

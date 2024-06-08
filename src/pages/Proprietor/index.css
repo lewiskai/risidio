@@ -1,0 +1,211 @@
+.Proprietor_Box {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.Proprietor_topBox {
+    padding: 40px 60px;
+}
+
+.Proprietor_titleBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Proprietor_titleLeft {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 39px;
+    color: #23252B;
+}
+
+.Proprietor_titleRight {
+    width: 203px;
+    height: 30px;
+    padding: 24px 42px;
+    border: 1px solid #23252B;
+    border-radius: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #23252B;
+}
+
+.Proprietor_conBox1 {
+    width: 100%;
+    height: 568px;
+    border-radius: 25px;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Proprietor_conBox1Con1 {
+    margin: 30px 60px;
+    width: calc(100% - 120px);
+    height: calc(100% - 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Proprietor_conBox1Con1Left {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Proprietor_conBox1Con1Right {
+    width: 437px;
+    height: 411px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        border-radius: 52px;
+    }
+}
+
+.Proprietor_conBox1Con1LeftCon1 {
+    font-weight: 500;
+    font-size: 12px;
+    width: 150px;
+    height: 33px;
+    background: #FADFE4;
+    border-radius: 49px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.Proprietor_conBox1Con1LeftCon2 {
+    height: 29px;
+    font-weight: 400;
+    font-size: 24px;
+    color: #617587;
+}
+
+.Proprietor_conBox1Con1LeftCon3 {
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 77px;
+    margin-bottom: 20px;
+}
+
+.Proprietor_conBox1Con1LeftCon4 {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.Proprietor_conBox1Con1LeftCon5 {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 36.32px;
+    color: #23252B;
+
+}
+
+.Proprietor_conBox1Con1LeftCon4Left {
+    img {
+        width: 68px;
+        height: 68px;
+    }
+}
+
+.Proprietor_conBox1Con1LeftCon4Right {
+    margin-left: 20px;
+}
+
+.Proprietor_conBox1Con1LeftCon4RightText1 {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #617587;
+}
+
+.Proprietor_conBox1Con1LeftCon4RightText2 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    color: #23252B;
+}
+
+.Proprietor_conBox1Con1LeftCon5 {
+    display: flex;
+    align-items: center;
+}
+
+.Proprietor_conBox1Con1LeftCon5Btn1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 248px;
+    height: 67px;
+    background: #23252B;
+    border-radius: 87px;
+    color: #fff;
+}
+
+.Proprietor_conBox1Con1LeftCon5Btn2 {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #23252B;
+    border-radius: 87px;
+    width: 248px;
+    height: 67px;
+    font-weight: 600;
+    font-size: 16px;
+    color: #23252B;
+    margin-left: 20px;
+}
+
+.Proprietor_collectionsBox {
+    margin-top: 100px;
+}
+
+.Proprietor_collectionsBoxTitle {
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.Proprietor_con4 {
+    display: flex;
+    margin-top: 40px;
+}
+
+.Proprietor_userImgCla {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+}
+
+.Proprietor_userNameBox {}
+
+.Proprietor_userArtistCla {
+    color: #617587;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+}
+
+.Proprietor_userNameCla {
+    color: #23252B;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.36px;
+}
