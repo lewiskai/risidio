@@ -1,0 +1,78 @@
+.travel {
+  position: absolute;
+
+  bottom: 100px;
+  left: 220px;
+
+  width: 366px;
+  height: 456.5px;
+
+  background-color: #fff;
+  border-radius: 37px;
+  box-shadow: 0px 4px 32.7px 0px rgba(0, 0, 0, 0.11);
+
+  padding: 20px 20px 20px 20px;
+
+  &-title {
+    color: var(--Black, #030d2e);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    margin-bottom: 8px;
+  }
+
+  &__card {
+    display: flex;
+    gap: 17.5px;
+    height: 118px;
+    flex-shrink: 0;
+    margin-bottom: 17px;
+    padding: 16px 13px 0px 20px;
+    transition: all 0.3s;
+
+    &:hover {
+      border-radius: 16px;
+      background: #f7f7f7;
+    }
+
+    &-elipse {
+      width: 70.667px;
+      height: 88.333px;
+      background-image: url('./assets/travelContainer.svg');
+      background-position: center;
+      background-size: cover;
+      position: relative;
+    }
+
+    &-icon {
+      width: 50.922px;
+      height: 50.922px;
+      background-image: url('./assets/travelIcon.svg');
+      position: absolute;
+      background-position: center;
+      background-size: cover;
+      top: 10px;
+      left: 8.5px;
+    }
+
+    &-text {
+      width: 194px;
+      height: 104px;
+    }
+
+    &-title {
+      display: block;
+      color: var(--Primary, #dc1720);
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+    }
+
+    &-description {
+      color: var(--G4, #5b6179);
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 120%;
+    }
+  }
+}

@@ -1,0 +1,547 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--active{
+    z-index: 1;
+  }
+}
+.user {
+  max-width: 100%; 
+  width: 95%;
+  max-height: 90%;
+  height: auto;
+  border-radius: 20px 20px 24px 24px;
+  z-index: 1;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+
+  @include onTablet {
+    width: calc(100vw - 100px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include onDesktopSmall {
+    width: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  @include onDesktopBig {
+    width: 85%;
+    height: 90%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__top {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16.149999618530273px);
+    padding: 20px;
+    color: #030d2e;
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+
+    @include onTablet {
+      padding: 14px 29px 14px 29px;
+    }
+  }
+
+  &__main {
+    display: flex;
+    background: #fff;
+    flex-direction: column;
+    box-shadow: 0px 4px 55.4px 0px rgba(0, 0, 0, 0.64);
+    border-radius: 0px 0px 20px 20px;
+    height: calc(100vh - 150px);
+    
+    overflow-y: scroll;
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #E8EBEF;
+      margin: 60px 0;
+      border-radius: 20px;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #30374D;
+      border-radius: 20px;
+    }
+
+
+    @include onTablet {
+      flex-direction: column;
+    }
+
+    @include onTabletBig {
+      flex-direction: row;
+      overflow: hidden;
+    }
+
+    @include onDesktopSmall {
+      padding: 0 50px;
+    }
+
+    @include onDesktopBig {
+      height: 897px;
+    }
+  };
+
+  &__left {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 30px;
+    background: linear-gradient(193deg, #fff0f0 1.28%, #f8faff 99.68%);
+
+    @include onTablet {
+      padding: 70px 50px;
+    }
+
+    @include onDesktopSmall {
+      background: linear-gradient(193deg, #f3f8fe 1.28%, #fdf8eb 99.68%);
+      padding: 20px;
+      width: 350px;
+      padding: 40px 30px;
+    }
+
+    @include onDesktopBig {
+      padding: 81px 42px 21px;
+      width: 474px;
+      padding: 61px 42px 21px;
+    }
+
+    &-title {
+      font-size: 20px;
+      line-height: 20px;
+      text-align: left;
+      font-family: Jost;
+      color: #030d2e;
+      margin-right: 5px;
+
+      @include onTabletBig {
+        margin-bottom: 20px;
+        font-size: 28px;
+        font-weight: 500;
+      }
+
+      @include onDesktopBig {
+        font-size: 48px;
+        margin-bottom: 26px;
+        font-weight: 500;
+      }
+      &-container{
+        display: inline-flex;
+      }
+
+      &--pronoun {
+        font-size: 16px;
+        padding-left: 2px;
+        margin-right: 5px;
+      }
+    }
+    .badge-icon {
+      width: 24px;
+      height: 24px;
+      vertical-align: baseline;
+    }
+
+    &-list {
+      display: inline-flex;
+      gap: 17px;
+      margin-bottom: 30px;
+      font-size: 14px;
+
+      @include onTabletBig {
+        font-size: 16px;
+      }
+
+      @include onDesktopBig {
+        margin-bottom: 27px;
+      }
+    }
+
+    &-button {
+      display: flex;
+      justify-content: center;
+
+      &-public {
+        display: block;
+        margin: 0 auto;
+        width: 252px;
+        height: 51px;
+        padding: 0;
+      }
+    }
+
+    &-item {
+      color: black;
+      position: relative;
+      margin-right: 8px;
+      text-transform: capitalize;
+      display: flex;
+      align-items: center; 
+      gap: 8px;
+
+      @include onTabletBig {
+        font-weight: 500;
+      }
+
+      &::before {
+        content: "\2022";
+        position: absolute;
+        left: -16px;
+      }
+
+      &:first-child::before {
+        content: none;
+      }
+    }
+
+    &-img {
+      background-image: url('./assets/image 258.svg');
+      width: 100%;
+      height: 163px;
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      margin: 0 auto;
+
+      @include onTablet {
+        height: 650px;
+      }
+
+      @include onDesktopSmall {
+        background-image: url('./assets/user.svg');
+        height: 400px;
+      }
+
+      @include onDesktopBig {
+        height: 1000px;
+        width: 389px;
+      }
+    }
+  }
+
+  &__right {
+    padding: 40px 30px;
+    @include onTablet {
+      padding: 70px 50px;
+    }
+
+    @include onTabletBig {
+      overflow-y: auto;
+    }
+
+    @include onDesktopSmall {
+      padding: 50px;
+    }
+
+    @include onDesktopBig {
+      padding: 70px;
+    }
+
+    &-top{
+      display: flex;
+    }
+
+    &-button {
+      &-container {
+        display: flex;
+        gap: 16px;
+        white-space: nowrap;
+        width: 300px;
+        padding: 0px 0px 20px 0px;
+        align-items: center;
+        flex: 1;
+
+        @include onDesktopSmall {
+          overflow: none;
+          overflow-x: none;
+        }
+
+        @include onTablet {
+          overflow-x: none;
+        }
+
+        @include onDesktopBig {
+          overflow-x: none;
+        }
+
+        @include onMobile {
+          overflow-x: auto;
+        }
+
+        &button {
+          flex-shrink: 0;
+        }
+
+        &--contact {
+          position: relative;
+          top: -10%;
+          right: -35%;
+        }
+      }
+
+      &--settings {
+        margin-left: 5px;
+      position: relative;
+      align-self: flex-start;
+
+
+        @include onTablet {
+          display: none;
+        }
+
+        @include onDesktopSmall {
+          display: block;
+        }
+
+        @include onDesktopBig {
+          display: block;
+        }
+      }
+
+      &--message {
+        width: 275px;
+        height: 51px;
+        padding: 0;
+      }
+
+      &--add-contact {
+        width: 53px;
+        height: 51px;
+        border: 1px solid #dcdcdc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+    }
+
+    &-title {
+      font-family: Jost;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+      color: #030d2e;
+      font-weight: 400;
+      text-align: left;
+      margin-bottom: 31px;
+
+      &--underline {
+        text-decoration: underline;
+      }
+    }
+
+    &-settings {
+      width: 200px;
+      height: auto;
+      right: 0;
+      background-color: #ffffff;
+      border-radius: 11px;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      padding: 14px 7px 0;
+      position: absolute;
+      margin-top: 25px;
+      margin-right: 115px;
+      z-index: 1;
+
+      &-option {
+        font-family: Jost;
+        font-size: 13px;
+        width: 100%;
+        border-radius: 7px;
+        line-height: 200%;
+        margin-bottom: 5px;
+        transition: all 0.3s;
+
+        &:hover {
+          background-color: $G1;
+        }
+      }
+    }
+
+    &-description {
+      font-family: Jost;
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 200%;
+      color: #030d2e;
+      font-weight: 400;
+      text-align: left;
+      margin-bottom: 31px;
+
+      &--title {
+        font-weight: 400;
+        font-size: 24px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &__form {
+    position: relative;
+    margin-bottom: 50px;
+
+    @include onDesktopBig {
+      margin-bottom: 80px;
+    }
+
+    &-input {
+      width: 100%;
+      height: 242px;
+      text-align: left;
+      margin: 0;
+      padding: 25px;
+      border-radius: 15px;
+      font-family: Jost;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 20px;
+      margin-bottom: 16px;
+      border: 1px solid #b6bac4;
+
+      @include onDesktopSmall {
+        width: 100%;
+        height: 225px;
+      }
+
+      @include onDesktopBig {
+        height: 225px;
+      }
+    }
+
+    &-dashboard {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      position: absolute;
+      right: 0;
+      bottom: -95px;
+      color: #5b6179;
+      text-decoration: underline;
+      cursor: pointer;
+
+      svg {
+        margin-left: 5px;
+      }
+    }
+  }
+
+  &__scripts {
+    &-header {
+      display: flex;
+      padding-top: 16px;
+    }
+
+    &-title {
+      font-family: Jost;
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: left;
+      margin-bottom: 22px;
+      display: flex;
+      align-items: center;
+
+      &--span {
+        font-weight: 300;
+        font-size: 20px;
+      }
+    }
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    @include onMobile {
+      &-container {
+        width: 350px;
+      }
+    }
+
+    &-img {
+      background-image: url('./assets/script.svg');
+      height: 201px;
+      width: 156px;
+      background-position: center;
+      background-size: cover;
+
+      @include onDesktopSmall {
+        height: 257px;
+        width: 200px;
+      }
+
+      @include onDesktopBig {
+        height: 257px;
+        width: 200px;
+      }
+    }
+
+    &-wrapper {
+      margin-left: 5px;
+    }
+  }
+
+  &__password {
+    width: 567px;
+    height: 634px;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 66px 80px;
+
+    &-title {
+      font-family: Jost;
+      font-size: 36px;
+      line-height: 150%;
+      font-weight: 200;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 44px;
+    }
+
+    &-form {
+      &-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+
+        &--profile {
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .SettingsText{
+    display: none;
+  }
+  .user__right-button--settings {
+    top: -80px;
+}
+}

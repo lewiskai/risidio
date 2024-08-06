@@ -1,0 +1,67 @@
+on:
+  push:
+    branches:
+      - develop
+      - main
+      - staging
+env:
+  APP_NAME: prom-app
+  ENVIROMENT: development
+  APP_S3_DIR: prom-codebase-s3bucket/${ENVIROMENT}/${APP_NAME}
+  BUILD_NAME: v${{github.run_number}}
+  APP_DIR: /var/www/${APP_NAME}
+  CI: false
+  NODE_OPTIONS: --max-old-space-size=4096
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setting git action (headstrong) env
+        run: |
+          S3_ZIP_URL="${{env.APP_S3_DIR}}/${{env.BUILD_NAME}}.zip"
+          echo "APP_S3_URL=s3://${S3_ZIP_URL}" >> $GITHUB_ENV
+          echo "RELEASE_NAME=${{env.APP_NAME}}-${{env.BUILD_NAME}}" >> $GITHUB_ENV
+          echo "APP_S3_OBJ_URL=https://s3.eu-west-2.amazonaws.com/${S3_ZIP_URL}" >> $GITHUB_ENV
+
+      - name: checkout repository
+        uses: actions/checkout@v3
+
+      - name: install dependencies
+        run: yarn install
+
+      - name: compile/build application
+        run: yarn build
+
+      - name: copy .htaccess to build
+        run: cp -r ./.htaccess ./build
+
+      - name: generate deployment package
+        run: zip -r ${{env.BUILD_NAME}}.zip build
+
+      - name: setup aws credentials
+        uses: aws-actions/configure-aws-credentials@v2
+        with:
+          aws-access-key-id: ${{secrets.AWS_ACCESS_KEY_ID}}
+          aws-secret-access-key: ${{secrets.AWS_SECRET_ACCESS_KEY}}
+          aws-region: eu-west-2
+
+      - name: upload the deployment package to the s3bucket
+        run: aws s3 cp ${{ env.BUILD_NAME }}.zip ${{env.APP_S3_URL}} --acl public-read
+
+      - name: deploy code via ssh to the server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{secrets.EC2_HOST_DNS}}
+          username: ${{secrets.SSH_USERNAME}}
+          key: |
+            ${{secrets.SSH_PRIVATE_KEY}}
+          script_stop: true
+          script: |
+            cd /var/www
+            wget -O ${{env.RELEASE_NAME}}.zip ${{env.APP_S3_OBJ_URL}}
+            unzip ${{env.RELEASE_NAME}}.zip -d ${{env.RELEASE_NAME}}
+            sudo rm -rf ${{env.APP_NAME}}
+            mv ${{ env.RELEASE_NAME }}/build ${{env.APP_NAME}}
+            rm -rf ${{env.RELEASE_NAME}} ${{env.RELEASE_NAME}}.zip
+            sudo chown ${{secrets.SSH_USERNAME}} ${{env.APP_NAME}}
+            sudo chmod u+rwx ${{env.APP_NAME}}

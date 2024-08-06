@@ -1,0 +1,171 @@
+.chat {
+  width: 350px;
+  height: 480px;
+
+  position: fixed;
+  top: 16%;
+
+  transition: transform 0.3s ease-in-out;
+
+
+
+  font-family: Jost;
+
+  font-size: 16px;
+  font-weight: 300;
+
+  @include onDesktopBig {
+    width: 465px;
+    height: 820px;
+
+  }
+
+  &--open {
+    transform: translateX(-100%);
+  }
+
+
+  &__nav {
+    height: 44px;
+    background: rgba(255, 255, 255, 0.60);
+
+    border-radius: 0 20px 0 0;
+    backdrop-filter: blur(16.149999618530273px);
+
+
+    padding: 10px;
+
+    &-title {
+      color: $Black;
+      font-weight: 500;
+    }
+  }
+
+  &__main {
+    background-color: #fff;
+    height: 436px;
+    border-radius: 0 0 20px;
+
+
+    @include onDesktopBig {
+      height: 776px;
+    }
+
+
+    padding: 20px;
+
+    &-messages {
+      overflow-y: scroll;
+      height: 330px;
+
+      @include onDesktopBig {
+        height: 660px;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    background-color: $G1;
+    outline: none;
+    padding: 10px;
+
+    &-container {
+      padding: 15px;
+
+      display: flex;
+
+      justify-content: space-between;
+      position: absolute;
+      bottom: 5%;
+      width: 320px;
+      height: 46px;
+      border-radius: 23px;
+      background-color: $G1;
+
+      @include onDesktopBig {
+        width: 400px;
+        bottom: 3%;
+
+      }
+
+
+
+    }
+
+    &-emojies {
+      position: relative;
+    }
+  }
+
+  &__message {
+    margin-bottom: 10px;
+    display: flex;
+    gap: 16px;
+
+    &-img {
+      background-image: url('./assets/avatarSmall.svg');
+      width: 39px;
+      height: 39px;
+      background-position: center;
+      background-size: cover;
+    }
+
+    &-sender {
+      font-size: 17px;
+      color: $PrimaryD;
+      font-weight: 500;
+    }
+
+    &-content {
+      font-size: 16px;
+      line-height: 200%;
+
+    }
+  }
+
+  &__emoji {
+    position: absolute;
+    right: -50px;
+    bottom: 380px;
+
+    @include onDesktopBig {
+      right: -20px;
+      bottom: 580px;
+
+    }
+  }
+
+  &__button {
+    width: 40px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.60);
+
+    border-radius: 0 20px 20px 0;
+    backdrop-filter: blur(16.149999618530273px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: -11.4%;
+    top: 20px;
+
+    @include onDesktopBig {
+      right: -8.4%;
+
+    }
+  }
+}
+
+
+@media (max-width: 768px) {
+  .chat__button{
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .chat chat--open {
+    display: none;
+  }
+}

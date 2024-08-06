@@ -1,0 +1,181 @@
+.call {
+  border-radius: 37px;
+
+  padding: 82px 105px 80px;
+  background: #fff;
+
+  width: 366px;
+  height: 609px;
+
+  position: relative;
+
+  z-index: 4;
+
+
+
+  @include onTablet {
+    padding: 50px 40px 47px;
+    width: 518px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    backdrop-filter: blur(16.149999618530273px);
+    background: rgba(255, 255, 255, 0.799);
+
+    position: absolute;
+    top: 13px;
+    right: 13px;
+  }
+
+  &--mobile {
+display: block;
+margin: 0 auto;
+position: relative;
+bottom: 40%;
+@include onTablet {
+  display: none;
+}
+  }
+
+
+
+  &--none {
+    display: none;
+  }
+
+  &--active{
+    padding: 50px 40px 47px;
+    width: 518px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    backdrop-filter: blur(16.149999618530273px);
+    background: rgba(255, 255, 255, 0.799);
+
+    position: absolute;
+
+    top: 30%;
+    left: 13px;
+
+    display: none;
+
+    @include onTablet {
+      display: flex;
+    }
+
+
+  }
+
+  &--incoming {
+    padding: 50px 40px 47px;
+    width: 518px;
+    height: 180px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    backdrop-filter: blur(16.149999618530273px);
+    background: rgba(255, 255, 255, 0.799);
+
+    position: absolute;
+
+    top: 13px;
+    left: 13px;
+
+    display: none;
+
+    @include onTablet {
+      display: flex;
+    }
+    
+  
+  }
+
+  &--outgoing {
+    display: none;
+
+    @include onTablet {
+      display: flex;
+    }
+  }
+
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+
+  &-img {
+    width: 83px;
+    height: 83px;
+    border-radius: 50%;
+    background-image: url('./assets/userIcon.svg');
+    background-position: center;
+    background-size: cover;
+
+    margin: 0 auto;
+
+    @include onTablet {
+      margin-right: 15px;
+    }
+  }
+
+  &__text {
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 151%;
+
+
+
+    &-title {
+      line-height: 112%;
+      font-size: 17px;
+      font-weight: 500;
+    }
+
+    &-active {
+      font-size: 14px;
+      color: $Primary;
+      font-weight: 500;
+    }
+
+    &-duration {
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 10px;
+    margin-bottom: 52px;
+
+    @include onTablet {
+      gap: 18px;
+
+      width: auto;
+      height: auto;
+    }
+
+    &-text {
+      font-family: Jost;
+      font-size: 14px;
+      line-height: 200%;
+      color: #5B6179;
+      font-weight: 300;
+
+    }
+  }
+}
+

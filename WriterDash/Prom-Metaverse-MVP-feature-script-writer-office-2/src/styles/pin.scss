@@ -1,0 +1,352 @@
+.onBuildingHover {
+  position: absolute;
+  top: 25%;
+  right: 27%;
+  width: 139px;
+  height: 139px;
+  z-index: 1;
+  transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+
+.onBuildingHover:hover {
+  transform: translateY(-50%);
+}
+
+.onBillboardHover {
+  position: absolute;
+  top: 2%;
+  right: 28%;
+  width: 139px;
+  height: 139px;
+  z-index: 3;
+  transition: transform 0.3s ease; /* Add transition for smooth movement */
+}
+.onBillboardHover:hover {
+  transform: translateY(-10%);
+}
+
+.building-wrapper {
+  width: 417px;
+  height: 174px;
+  border-radius: 50%;
+  position: absolute;
+  top: 35%;
+  right: 20%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transform: translateY(-35%);
+}
+
+.pin-heading-building-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+.pin-heading-building-primary {
+  font-family: 'Jost';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #dc1720;
+}
+.pin-heading-billboard-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+}
+.pin-heading-billboard-primary {
+  font-family: 'Jost';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #dc1720;
+}
+.pin-info-building-container {
+  width: 396px;
+  height: 98px;
+  text-align: center;
+  margin-top: 10px;
+}
+.pin-info-billboard-container {
+  width: 400px;
+  height: 42px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.pin-info-billboard-text {
+  font-family: 'Jost';
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #030d2e;
+}
+.pin-info-text {
+  font-family: 'Jost';
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #030d2e;
+}
+
+// billboard wrapper
+
+.billboard-wrapper {
+  width: 443px;
+  height: 206px;
+  border-radius: 50%;
+  position: absolute;
+  top: 12%;
+  right: 19%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.billboard-btn-container {
+  margin: 0 auto;
+  width: 368px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+.billboard-ad-website-wrapper {
+  width: 190px;
+  height: 47px;
+  padding: 16px 50px 16px 50px;
+  border-radius: 38px;
+  border: 1px solid rgba(151, 158, 169, 1);
+}
+.billboard-ad-website-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.billboard-ad-billboard-wrapper {
+  width: 154px;
+  height: 47px;
+  padding: 16px 50px 16px 50px;
+  border-radius: 38px;
+  border: none;
+  background-color: #dc1720;
+}
+.billboard-ad-billboard-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+}
+// showing the gray bg for the building when tutorial is on
+.building-tutorial {
+  position: fixed;
+  background-color: #7f7d7e;
+  height: 220px;
+  width: 220px;
+  top: -20px;
+  right: -270px;
+  opacity: 0.7;
+}
+
+.dashboard-wrapper {
+  width: 443px;
+  height: 206px;
+  border-radius: 50%;
+  position: absolute;
+  padding: 20px;
+  top: 47%;
+  right: 63%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transform: translateY(-35%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align all children elements horizontally */
+  justify-content: space-around; /* Space out children elements */
+}
+
+.pin-heading-dashboard-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pin-heading-dashboard-primary {
+  font-family: 'Jost';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #dc1720;
+}
+
+.pin-info-dashboard-container{
+  height: 42px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.pin-info-dashboard-text {
+  font-family: 'Jost';
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #030d2e;
+  text-align: center;
+}
+.onDashboardHover{
+  position: absolute;
+  top: 27%;
+  right: 73%;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.onDashboardHover:hover{
+  transform: translateY(-25%);
+}
+
+.dashboard-button-wrapper {
+  width: 204px;
+  height: 47px;
+  padding: 16px 50px 16px 50px;
+  border-radius: 38px;
+  border: none;
+  background-color: #dc1720;
+  align-items: center;
+}
+
+.dashboard-ad-dashboard-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pin-heading-scriptboard-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.pin-heading-scriptboard-primary {
+  font-family: 'Jost';
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  color: #dc1720;
+}
+
+.pin-info-scriptboard-container{
+  height: 42px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.pin-info-scriptboard-text {
+  font-family: 'Jost';
+  line-height: 32px;
+  font-size: 16px;
+  font-weight: 400;
+  color: #030d2e;
+  text-align: center;
+}
+
+.scriptboard-button-wrapper {
+  width: 204px;
+  height: 47px;
+  padding: 16px 50px 16px 50px;
+  border-radius: 38px;
+  border: none;
+  background-color: #dc1720;
+  align-items: center;
+}
+
+.scriptboard-ad-scriptboard-btn{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+  color: #fff;
+  cursor: pointer;
+}
+
+.scriptboard-wrapper{
+  width: 443px;
+  height: 206px;
+  border-radius: 50%;
+  position: absolute;
+  padding: 20px;
+  top: 28%;
+  right: 13.5%;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(60px);
+  -webkit-backdrop-filter: blur(60px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transform: translateY(-35%);
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center align all children elements horizontally */
+  justify-content: space-around; /* Space out children elements */
+}
+
+.onScriptboardHover{
+  position: absolute;
+  top: 3.5%;
+  right: 24%;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+.onScriptboardHover:hover{
+  transform: translateY(-10%);
+}

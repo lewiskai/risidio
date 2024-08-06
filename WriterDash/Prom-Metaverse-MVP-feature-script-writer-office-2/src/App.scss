@@ -1,0 +1,54 @@
+@font-face {
+  font-family: Jost;
+  src: url(../src/fonts/Jost-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url(../src/fonts/Inter-VariableFont_slnt\wght.ttf);
+}
+
+@import "../src/styles/_utils/vars";
+@import "../src/styles/_utils/mixins";
+@import "../src/styles/welcome.scss";
+@import "../src/styles/verification.scss";
+@import "../src/styles/page.scss";
+@import "../src/styles/button.scss";
+@import "../src/styles/form.scss";
+@import "../src/styles/navbar.scss";
+@import "../src/styles/onboarding.scss";
+@import ".//styles/status.scss";
+@import "./styles/logo.scss";
+@import "./styles/character.scss";
+@import "./styles/question.scss";
+@import "./styles/_popup/bag.scss";
+@import "./styles/moviecard.scss";
+@import "./styles/triangle.scss";
+@import "./styles/_popup/notification.scss";
+@import "./styles/_popup/contact.scss";
+@import "./styles/_popup/fastTravel.scss";
+@import "./styles/_popup/profile.scss";
+@import "./styles/_popup/user.scss";
+@import "./styles/_popup/onboarding.scss";
+@import "./styles/wallet.scss";
+@import "./styles/_popup/call.scss";
+@import "./styles/_popup/message.scss";
+@import "./styles/pin.scss";
+@import "./styles/scripts/script.scss";
+@import "./styles/_popup/settings.scss";
+@import "./styles/checkbox.scss";
+@import "./styles/_popup/password.scss";
+@import "./styles/_popup/award.scss";
+@import "./styles/_popup/chat.scss";
+@import "./styles/scripts/scriptUpload.scss";
+@import "./styles/_popup/billboard.scss";
+@import "./styles/_popup/billboardUpload.scss";
+@import "./styles/review.scss";
+@import "./styles/slider.scss";
+@import "./styles/_popup/thanks.scss";
+@import "./styles/setup-tfa.scss";
+@import "./styles/signin.scss";
+@import "./styles/radio.scss";
+@import "./styles/rpmOverride.scss";
+@import "./styles/scriptwriteroffice.scss";
+@import "./styles/_popup/scriptwriterofficedashboard.scss";

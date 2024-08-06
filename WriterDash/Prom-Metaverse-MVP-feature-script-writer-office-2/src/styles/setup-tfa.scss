@@ -1,0 +1,69 @@
+.setup-tfa {
+  font-family: Jost;
+  height: 572px;
+  width: 391px;
+
+  @include onDesktopSmall {
+    width: 567px;
+  }
+
+  &-button {
+    &--red {
+      padding: 0;
+      width: 140px;
+      height: 49px;
+
+      @include onDesktopSmall {
+        width: 187px;
+      }
+    }
+
+    &--white {
+      padding: 0;
+      height: 49px;
+      width: 162px;
+
+      @include onDesktopSmall {
+        width: 226px;
+      }
+    }
+  }
+
+  &-container {
+    padding-right: 25px;
+    padding-left: 25px;
+
+    @include onDesktopSmall {
+      padding-right: 55px;
+      padding-left: 55px;
+    }
+    padding: 50px 45px;
+
+    @include onDesktopSmall {
+      padding: 80px; // most likely desktopSmall
+    }
+
+    @include onDesktopBig {
+      padding: 65px 84px 81px;
+    }
+
+    &--form {
+      padding: 50px 39px 41px;
+
+      @include onDesktopSmall {
+        padding: 80px 39px 41px; // most likely desktopSmall
+      }
+    }
+  }
+
+  &-header {
+    color: #dc1720;
+    font-weight: 500;
+    margin-bottom: 12px;
+    font-size: 30px;
+
+    @include onDesktopBig {
+      font-size: 30px;
+    }
+  }
+}

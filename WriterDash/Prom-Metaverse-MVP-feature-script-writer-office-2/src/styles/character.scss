@@ -1,0 +1,62 @@
+.character {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(113deg, #fae0a8 -0.25%, #ffc6ca 99.41%);
+  overflow-y: hidden;
+
+  &--mobile {
+    @include onTablet {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @include onTablet {
+      display: block;
+    }
+  }
+
+  &-title {
+    color: var(--Secondary-L1, #fff8d8);
+    font-family: Jost;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 100%;
+    letter-spacing: -1.1px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    margin-left: 2rem;
+    margin-top: 1rem;
+
+    @include onDesktopSmall {
+      font-size: 5rem;
+    }
+    @include onTablet {
+      letter-spacing: -2.2px;
+      margin-left: 4rem;
+    }
+
+   
+
+    @include onDesktopBig {
+      font-size: 130px;
+    }
+
+  }
+
+  &-container {
+
+    @include onDesktopSmall {
+      padding: 14px 60px 0px;
+    }
+
+    @include onDesktopBig {
+      padding: 14px 50px 0px;
+    }
+  
+  }
+}

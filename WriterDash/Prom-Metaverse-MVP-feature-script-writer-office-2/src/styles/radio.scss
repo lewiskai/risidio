@@ -1,0 +1,40 @@
+.custom-radio input[type="radio"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0.5;
+    font: inherit;
+    color: #cbd5e0;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid #e2e8f0;
+    border-radius: 50%;
+    display: inline-grid;
+    place-content: center;
+    vertical-align: middle; /* Ensure the radio button aligns with text */
+  }
+  
+  .custom-radio input[type="radio"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    border-radius: 50%;
+    transition: 120ms transform ease-in-out;
+    transform: scale(0);
+    box-shadow: inset 1em 1em $Primary;
+  }
+  
+  .custom-radio input[type="radio"]:checked::before {
+    transform: scale(1);
+  }
+  
+  .custom-radio input[type="radio"]:checked {
+    border-color: $Primary;
+  }
+  
+  .custom-radio {
+    display: flex;
+    align-items: center;
+    gap:1em;
+
+  }
+  

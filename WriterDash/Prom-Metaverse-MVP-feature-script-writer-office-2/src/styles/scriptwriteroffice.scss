@@ -1,0 +1,27 @@
+.scriptwriteroffice-background {
+  background-image: url('/src/assets/scriptwriter-office-background.png');
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* This ensures the background stays fixed during scrolling */
+  position: relative; /* Ensure the element respects the viewport */
+}
+
+.scrollable-background-swop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1999px; /* Twice the width of the viewport for smooth scrolling */
+    height: 100vh;
+    background-image: url(/src/assets/scriptwriter-office-background.png);
+  
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 0; /* Start background at the top-left corner */
+    display: block;
+    @include onDesktopSmall {
+      display: none;
+    }
+  }

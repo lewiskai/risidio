@@ -1,0 +1,60 @@
+.checkbox-wrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-wrapper label {
+  // display: block;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-family: Jost;
+  font-weight: 300;
+  line-height: 200%;
+  font-size: 14px;
+  user-select: none;
+  @include onTabletBig {
+    font-size: 20px;
+  }
+}
+
+.checkbox-wrapper span {
+  position: absolute;
+  // top: 10px;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background-color: #fff;
+  border: 2px solid $G4;
+  border-radius: 50%;
+
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper label input:checked ~ span {
+  background-color: #fff;
+  border: 2px solid $Primary;
+}
+
+.checkbox-wrapper span:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.checkbox-wrapper label input:checked ~ span:after {
+  display: block;
+}
+
+.checkbox-wrapper label span:after {
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $Primary;
+}

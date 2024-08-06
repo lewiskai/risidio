@@ -1,0 +1,480 @@
+.form {
+  padding: 0.5rem 2rem;
+
+  @include onDesktopSmall {
+    padding: 0 2rem;
+  }
+
+  &-notification {
+    color: #727272;
+    font-family: Jost;
+    font-weight: 400;
+    line-height: 130%;
+    text-align: left;
+    font-size: 14px;
+
+    @include onDesktopBig {
+      font-size: 16px;
+      margin: 0 0 10px;
+    }
+  }
+
+  &-title {
+    color: #000;
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 500;
+    display: block;
+    text-align: left;
+    margin-left: 9px;
+    margin-bottom: 3px;
+
+    &--cinema {
+      @include onDesktopBig {
+        padding-bottom: 14px;
+      }
+    }
+  }
+
+  &-input {
+    display: block;
+    width: 100%;
+    height: 52px;
+    border-radius: 36px;
+    border: 1px solid #afadad;
+    box-shadow: 0px 1px 11px 2px rgba(0, 0, 0, 0);
+    padding-left: 15px;
+    box-sizing: border-box;
+    color: #000;
+    font-family: Jost;
+    font-weight: 500;
+
+    outline-color: #ff8d96;
+
+    // @include onTablet {
+    //   height: 2rem;
+    // }
+
+    // @include onDesktopBig {
+    //   height: 52px;
+    // }
+
+    &--1 {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &--2 {
+      margin-top: 10px;
+    }
+
+    &--5 {
+      @include onDesktopSmall {
+        margin-bottom: 50px;
+      }
+
+      @include onDesktopBig {
+        margin-bottom: 30px;
+      }
+    }
+
+    &--meta {
+      margin-bottom: 26px;
+
+      @include onTablet {
+        margin-bottom: 26px;
+      }
+    }
+
+    &--color {
+      cursor: pointer;
+      width: 22px;
+      height: 22px;
+      border-radius: 4px;
+      border: 1px solid var(--W, #fff);
+    }
+
+    &-skin {
+      &--1 {
+        background-color: #ffebc2 !important;
+      }
+
+      &--2 {
+        background-color: #ffebc2 !important;
+      }
+
+      &--3 {
+        background-color: #ffebc2 !important;
+      }
+
+      &--4 {
+        background-color: #ffebc2 !important;
+      }
+
+      &--5 {
+        background-color: #fff0a2 !important;
+      }
+
+      &--6 {
+        background-color: #f66744 !important;
+      }
+
+      &--7 {
+        background-color: #734106 !important;
+      }
+
+      &--8 {
+        background-color: #543507 !important;
+      }
+
+      &--9 {
+        background-color: #301506 !important;
+      }
+
+      &--10 {
+        background-color: #000 !important;
+      }
+    }
+
+    &-hair {
+      &--1 {
+        background-color: #ffebc2 !important;
+      }
+
+      &--2 {
+        background-color: #ffebc2 !important;
+      }
+
+      &--3 {
+        background-color: #543507 !important;
+      }
+
+      &--4 {
+        background-color: #dc1720 !important;
+      }
+
+      &--5 {
+        background-color: #000 !important;
+      }
+
+      &--6 {
+        background-color: #111f51 !important;
+      }
+
+      &--7 {
+        background-color: #4194d0 !important;
+      }
+
+      &--8 {
+        background-color: #6a139f !important;
+      }
+
+      &--9 {
+        background-color: #eb9ad9 !important;
+      }
+
+      &--10 {
+        background-color: #d4251f !important;
+      }
+    }
+ 
+    &--button {
+      width: 80%;
+      padding: 0.5rem;
+      border-radius: 36px;
+      background: var(--W, #fff) !important;
+      box-shadow: 0px 1px 11px 2px rgba(0, 0, 0, 0);
+      margin: 0 17px;
+    }
+  }
+
+  &-button {
+    width: 239px;
+    height: 51px;
+    background-color: transparent;
+    border: none;
+  }
+
+  &__character {
+    display: flex;
+
+    @include onDesktopSmall {
+    }
+
+    @include onTablet {
+      justify-content: space-between;
+    }
+
+    @include onDesktopBig {
+      justify-content: space-evenly;
+    }
+
+    &--desktop {
+      display: none;
+      @include onTablet {
+        display: flex;
+      }
+    }
+  }
+
+  &__left-side {
+    background: var(--W, #fff);
+
+    height: 330px;
+    border-radius: 24px;
+    display: none;
+    margin-left: 3rem;
+
+
+    @include onTablet {
+      display: block;
+      flex-direction: column;
+      justify-content: center;
+      padding: 3rem 30px;
+ 
+    }
+
+
+    @include onDesktopBig {
+      display: block;
+      width: 20%;
+      height: 400px;
+    }
+
+    &-industry {
+      display: flex;
+      flex-direction: column;
+
+      &-buttons {
+        width: 180px;
+        border-radius: 11px;
+        border: 1px solid var(--G3, #979ea9);
+        background: #fff;
+        padding: 5px;
+      }
+
+      &-button {
+        cursor: pointer;
+        width: 80px;
+        height: 26px;
+        text-transform: capitalize;
+
+        border-radius: 8px;
+        text-align: center;
+
+        &--active {
+          background: var(--Primary, #dc1720) !important;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__right-side {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    display: none;
+    margin-right: 5rem;
+    margin-top: 1rem;
+    width: 300px;
+
+    @include onTablet {
+      position: relative;
+      top: -80px;
+      display: block;
+    }
+
+    @include onTabletBig {
+      
+      top: -80px;
+    }
+    @include onDesktopSmall {
+      top: -80px;
+    }
+    @include onDesktopBig {
+      width: 350px;
+      top: -150px;
+    }
+
+    &-colors {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include onTablet {
+        width: 100%;
+      }
+
+      @include onDesktopBig {
+        margin-bottom: 40px;
+      }
+
+      &-container {
+        display: flex;
+        justify-content: center;
+        gap: 5px;
+        padding: 0.3rem;
+        &--hair {
+          margin-top: 10px;
+        }
+      }
+    }
+
+    &-hair {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    
+    }
+
+    &-top {
+    
+      flex-direction: column;
+      align-items: center;
+      padding: 0.5rem 0;
+      @include onDesktopBig {
+  
+      }
+    }
+
+    &-buttons {
+      display: flex;
+      align-items: center;
+      margin-top: 0.3rem;
+    }
+
+    &-red-button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1rem;
+
+      @include onDesktopBig {
+        position: relative;
+      }
+    }
+  }
+
+  &__center {
+    &-side {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: relative;
+ 
+      height: 70vh;
+      z-index: 1;
+
+      @include onTablet {
+        width: 100%;
+        top: -100px;
+        height: 500px;
+      }
+
+      @include onTabletBig {
+        width: 400px;
+        height: 400px;
+        top: -30px;
+      }
+
+      @include onDesktopSmall {
+        width: 250px;
+        height: 400px;
+      }
+
+      @include onDesktopBig {
+        width: 300px;
+        height: 450px;
+      }
+
+      &-button {
+        width: 205px;
+        height: 55px;
+        border-color: #30374d;
+        padding: 0.7rem;
+        display: none;
+
+        @include onTabletBig {
+          display: block;
+        }
+
+        @include onDesktopBig {
+          margin-top: -5rem;
+        }
+      }
+    }
+
+    &-img {
+      height: 80%;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 330px;
+      background-image: url("./assets/avatar.svg");
+      width: 100%;
+
+      @include onTablet {
+        width: 80%;
+        background-size: 300px;
+        position: relative;
+        top: -5%;
+       
+      }
+
+      @include onTabletBig {
+        width: 100%;
+        background-size: 350px;
+        position: relative;
+        top: -10%;
+      }
+
+      @include onDesktopSmall {
+        background-size: 370px;
+        width: 100%;
+        position: relative;
+        top: -20%;
+      }
+
+      @include onDesktopBig {
+        background-size: 550px;
+        width: 100%;
+        height: 1000px;
+        position: relative;
+        top: -40%;
+      }
+    }
+  }
+
+  &__popup {
+    position: relative;
+    width: 100%;
+    height: 280px;
+
+    transition: transform 0.3s ease-in-out;
+
+    &--show {
+      transform: translateY(-120%);
+    }
+
+    &-buttons {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 43px;
+      margin-bottom: 12px;
+    }
+
+    &-main {
+      overflow-y: scroll;
+      padding: 36px 43px;
+
+      border-radius: 23px 23px 0 0;
+
+      background: #fff;
+      color: red;
+
+      height: inherit;
+    }
+  }
+}

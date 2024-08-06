@@ -1,0 +1,193 @@
+.welcome {
+  &__signin {
+    width: 356px;
+    height: 622px;
+    border-radius: 37px;
+    box-shadow: 0px 4px 32.7px 0px rgba(0, 0, 0, 0.11);
+    font-family: Jost;
+    color: #000;
+    text-align: center;
+    font-family: Jost;
+    flex-shrink: 0;
+    background-color: #fff;
+    z-index: 1;
+
+    @include onDesktopSmall {
+      width: 567px;
+      height: 736px;
+    }
+
+    &--form {
+      width: 90%;
+      padding: 0.5rem;
+
+      //   @include onTablet {
+      //     width: 40%;
+      //   }
+
+      //   @include onTabletBig {
+      //     width: 40%;
+      //   }
+
+      @include onDesktopSmall {
+        width: 30%;
+      }
+
+      //   @include onDesktopBig {
+      //     width: 35%;
+      //   }
+    }
+
+    &-container {
+      padding: 50px 45px;
+
+      @include onDesktopSmall {
+        padding: 80px; // most likely desktopSmall
+      }
+
+      //   @include onDesktopBig {
+      //     padding: 65px 84px 81px;
+      //   }
+
+      &--form {
+        padding: 25px 0px 41px;
+
+        @include onDesktopSmall {
+          padding: 45px 0px; // most likely desktopSmall
+        }
+      }
+    }
+
+    &-title {
+      font-size: 26px;
+      font-weight: 300;
+      line-height: 150%;
+      font-family: Jost;
+
+      letter-spacing: -0.396px;
+      text-transform: uppercase;
+      margin-bottom: 5px;
+
+      //   @include onTablet {
+      //     font-size: 1.5rem;
+      //   }
+
+      @include onDesktopSmall {
+        font-size: 30px;
+        margin-top: 1.5rem;
+      }
+
+      //   @include onDesktopBig {
+      //     margin-bottom: 24px;
+      //     font-size: 36px;
+      //   }
+    }
+
+    &-description {
+      font-size: 14px;
+      margin: 0px 0px 39px;
+      line-height: 180%;
+
+      @include onDesktopSmall {
+        margin-bottom: 50px;
+      }
+
+      //   @include onDesktopBig {
+      //     line-height: 200%;
+
+      //     font-size: 16px;
+
+      //     margin-bottom: 71px; // as in Figma
+      //   }
+    }
+
+    &-link {
+      font-size: 14px;
+
+      color: #000;
+      text-align: center;
+      font-weight: 500;
+      line-height: 112%;
+      display: block;
+      text-decoration: underline;
+      margin-bottom: 69px;
+
+      @include onTablet {
+        font-size: 17px;
+        margin-bottom: 60px;
+      }
+
+      @include onDesktopBig {
+        margin-bottom: 88px;
+      }
+
+      &--create {
+        margin-bottom: 37px;
+      }
+    }
+
+    &-connect {
+      &::before {
+        left: 45px;
+
+        @include onDesktopSmall {
+          left: 92px;
+        }
+      }
+
+      &::after {
+        right: 45px;
+
+        @include onDesktopSmall {
+          right: 92px;
+        }
+      }
+
+      @include onDesktopSmall {
+        font-size: 17px;
+      }
+
+      @include onDesktopBig {
+        margin-bottom: 21px;
+      }
+    }
+
+    &-button {
+      &--red {
+        margin-bottom: 19px;
+
+        @include onDesktopSmall {
+          margin-bottom: 24px;
+        }
+      }
+
+      &--white {
+        margin-bottom: 17px;
+
+        @include onDesktopSmall {
+          margin-bottom: 20px;
+        }
+      }
+    }
+    &-red-button {
+      margin-bottom: 8px;
+      width: 203px;
+    }
+  }
+}
+
+.signin-form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  &-inputs {
+    display: flex;
+    width: 100%;
+
+    background-color: gap;
+    flex-direction: column;
+    gap: 5px;
+  }
+}

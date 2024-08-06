@@ -1,0 +1,155 @@
+.button {
+  &--red {
+    padding: 16px 50px;
+    font-size: 14px;
+
+    @include onTablet {
+      font-size: 17px;
+      
+    }
+  }
+
+  &--transparent {
+    width: 80px;
+    height: 27px;
+
+    color: #747474;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1px solid #e1e1e1;
+    line-height: 112%;
+  }
+
+  &--white {
+    padding: 10px 50px;
+    border: 1px solid var(--G2, #b6bac4);
+
+    @include onTablet {
+      padding: 16px 50px;
+    }
+  }
+
+  &--buy-more {
+    width: 128.783px;
+    height: 37.516px;
+    padding: 0;
+  }
+
+  &--accept {
+    width: 122px;
+    height: 27.123px;
+
+    padding: 0;
+  }
+
+  &--contact {
+    width: 125px;
+    height: 31px;
+    padding: 0;
+    color: #747474 !important;
+    font-size: 12px !important;
+  }
+
+  &--wallet {
+    border-radius: 38px;
+    border: 1px solid var(--G2, #b6bac4);
+    display: inline-flex;
+    padding: 16px 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &--my-profile {
+    width: 157px;
+    height: 42px;
+    border-radius: 38px;
+    border: 1px solid $G2;
+    font-weight: 400;
+    display: block;
+  }
+
+  &--log-out {
+    border: none;
+    font-size: 17px;
+    padding: 0;
+  }
+
+  &--avatar {
+    padding: 0;
+    width: 200px;
+    height: 41px;
+    margin: 0 auto;
+
+    @include onDesktopBig {
+      position: relative;
+      bottom: 40px;
+    }
+  }
+
+  &--user-right {
+    padding: 0;
+    width: 117px;
+    height: 26px;
+    font-size: 12px !important;
+  }
+
+  &--edit {
+    width: 153px;
+    height: 51px;
+    color: #5b6179;
+    position: absolute;
+    right: 0;
+  }
+
+  &--wallet {
+    border-radius: 38px;
+    border: 1px solid $G2;
+
+    width: 157px;
+    height: 42px;
+    color: $G5;
+
+    margin: 0 auto;
+    margin-top: 20px;
+
+    @include onTablet {
+      width: 217px;
+      height: 51px;
+      margin: 0;
+    }
+
+    @include onDesktopBig {
+      margin-top: 60px;
+    }
+  }
+
+  &--user-add {
+    position: absolute;
+    right: 0;
+    width: 113px;
+    height: 39px;
+    padding: 0;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 112%;
+  }
+
+  &--create-character {
+    width: 230px;
+    height: 45px;
+    padding: 0;
+    margin-bottom: 1.5rem;
+    @include onTablet{
+      margin-bottom: 0.5rem;
+    }
+  }
+
+  &--randomise {
+    width: 125px;
+    height: 49px;
+    border-color: $G5;
+    color: $G5;
+  }
+}

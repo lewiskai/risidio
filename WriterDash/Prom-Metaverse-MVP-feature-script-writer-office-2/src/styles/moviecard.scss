@@ -1,0 +1,25 @@
+.moviecard {
+  margin-bottom: 10px;
+  &-img {
+    width: 130px;
+    height: 158px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: var(--G1, #E8EBEF);
+    margin-bottom: 8px;
+  }
+
+  &-title {
+    color: var(--Primary, #DC1720);
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  &-description {
+    color: var(--Black, #030D2E);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 200%;
+  }
+}

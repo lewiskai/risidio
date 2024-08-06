@@ -1,0 +1,182 @@
+.scrollable-background-swod {
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  position: relative;
+  overflow: auto;
+  background-image: url(/src/assets/writer-dashboard.png);
+}
+
+.scriptwriter-window {
+  display: flex;
+  max-width: 100%;
+  width: 100%;
+  max-height: 90%;
+  height: 100%;
+  border-radius: 20px 20px 24px 24px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-color: #eeeeee;
+  border-width: 62px 66px 114px 66px; /* top right bottom left */
+  border-style: solid;
+  overflow: hidden;
+  z-index: 1;
+
+  @include onTablet {
+    width: calc(100vw - 100px);
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.scriptwriter-scroll{
+  overflow-y: auto;
+  display: flex;
+}
+
+.scriptwriter-window-one,
+.scriptwriter-window-two {
+  max-width: 50%;
+  width: 50%;
+  max-height: 90%;
+  height: 90%;
+  padding-top: 83px;
+}
+
+.scriptwriter-window-one {
+  margin-left: 239px;
+  background-color: rgb(255, 255, 255);
+
+  @include onTablet {
+    width: calc(100vw - 100px);
+  }
+
+  &-title {
+    font-family: 'Jost';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-title-two {
+    font-family: Jost;
+    font-size: 37px;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.white-button-dashboard {
+  padding: 1rem 3.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin-right: 10px;
+  justify-content: flex-end;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #4a4a4a;
+  border: 1px solid #c0c0c0;
+  border-radius: 39.616px;
+}
+
+.scripts-spacer {
+  display: flex;
+  justify-content: flex;
+  align-items: center;
+  max-width: 824px;
+}
+
+.filter-text-icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 47px;
+}
+
+.filter-image {
+  margin-right: 10px;
+}
+
+.scriptwriter-window-two {
+  margin-left: 188px;
+  background-color: rgb(255, 255, 255);
+
+  @include onTablet {
+    width: calc(100vw - 100px);
+  }
+
+  &-title {
+    font-family: 'Jost';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 30px;
+    margin-top: 10px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-title-two {
+    font-family: Jost;
+    font-size: 37px;
+    font-weight: 200;
+    text-transform: uppercase;
+  }
+
+  &-text {
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+
+.red-button-dashboard {
+  display: flex;
+  justify-content: flex-end; /* Aligns content to the end (right end) of the flex container */
+  padding: 16px 48px;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 600;
+  line-height: 1.25;
+  text-align: center; /* Adjust as needed */
+  color: white;
+  background-color: #dc1720e5;
+  border-radius: 39.616px;
+}
+
+.scripts-spacer-two-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 605px;
+}
+
+.scripts-spacer-one-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  max-width: 839px;
+}
+.scripts-spacer-two{
+  display: flex;
+  align-items: center;
+  max-width: 605px;
+}

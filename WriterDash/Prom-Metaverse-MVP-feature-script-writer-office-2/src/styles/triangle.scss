@@ -1,0 +1,142 @@
+.triangle-container {
+  position: relative;
+  width: 37px; /* Ширина треугольника */
+  height: 37px; /* Высота треугольника */
+  z-index: 0;
+
+  &--notification {
+    width: 7px; /* Ширина треугольника */
+    height: 7px; /* Высота треугольника */
+  }
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+  border-right: 50px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+  border-bottom: 100px solid #fff; /* Измените цвет и высоту, чтобы настроить высоту и цвет треугольника */
+  position: absolute;
+  top: 10px;
+  left: 200px;
+  transform: rotate(-180deg);
+
+  &--notification {
+    top: 10px;
+    z-index: -1;
+
+    border-left: 20px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+    border-right: 20px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+    border-bottom: 40px solid #fff; /* Измените цвет и высоту, чтобы настроить высоту и цвет треугольника */
+  }
+
+  &--contact {
+    top: -10px;
+    left: 140px;
+    z-index: -1;
+
+    border-left: 20px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+    border-right: 20px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+    border-bottom: 40px solid #fff; /* Измените цвет и высоту, чтобы настроить высоту и цвет треугольника */
+  }
+
+  &--travel {
+    top: -10px;
+    left: 130px;
+    z-index: -1;
+
+    border-left: 20px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+    border-right: 20px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+    border-bottom: 40px solid #fff; /* Измените цвет и высоту, чтобы настроить высоту и цвет треугольника */
+    &--0 {
+      top: -10px;
+      left: 130px;
+      display: none;
+    }
+    &--1 {
+      top: 0px;
+      left: 125px;
+
+      @include onTablet {
+        top: 84px;
+        left: 32px;
+      }
+      @include onDesktopBig {
+        left: 56px;
+        top: 84px;
+      }
+    }
+    &--2 {
+      top: 56px;
+      left: 50px;
+      @include onTablet {
+        top: 40px;
+        left: 320px;
+      }
+      @include onTabletBig {
+        left: 420px;
+      }
+      @include onDesktopSmall {
+        left: 390px;
+      }
+      @include onDesktopBig {
+        left: 300px;
+      }
+     
+    }
+    &--3 {
+      display: none;
+      @include onTablet {
+        display: block;
+        top: -120px;
+        left: 600px;
+        transform: rotate(90deg);
+      }
+      @include onTabletBig {
+        display: block;
+        top: -165px;
+        left: 600px;
+        transform: rotate(90deg);
+      }
+      @include onDesktopSmall {
+        display: block;
+        top: -165px;
+        left: 600px;
+        transform: rotate(90deg);
+      }
+    }
+  }
+
+  &--profile {
+    top: 10px;
+    left: 0px;
+    z-index: -1;
+
+    border-left: 20px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+    border-right: 20px solid transparent; /* Измените размеры бордера, чтобы настроить ширину треугольника */
+    border-bottom: 40px solid #fff; /* Измените цвет и высоту, чтобы настроить высоту и цвет треугольника */
+  }
+  
+}
+@media (max-width: 1024px) {
+  .triangle-up {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .triangle-up{
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .triangle-up-message {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) { /* onTablet breakpoint */
+  .triangle-up-message{
+    display: none;
+  }
+}

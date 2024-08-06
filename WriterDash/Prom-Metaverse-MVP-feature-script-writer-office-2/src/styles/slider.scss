@@ -1,0 +1,125 @@
+.slider {
+  // padding: 0px 123px 20px ;
+  width: 100%;
+  &-title {
+    font-family: Jost;
+    font-weight: 300;
+    font-size: 16px;
+    color: $Black;
+    text-transform: capitalize;
+  }
+}
+
+.rc-slider-track {
+  width: 501px !important;
+  height: 12px;
+  border-radius: 11.5px;
+  background-color: $G1;
+  /* Change this color to your desired track color */
+}
+
+.slider .rc-slider-handle {
+  border-color: #1890ff;
+  /* Change this color to your desired handle color */
+}
+
+.slider .rc-slider-mark {
+  margin-top: 8px;
+  /* Adjust the margin-top value based on your preference */
+}
+
+.slider .rc-slider-dot {
+  background-color: #1890ff;
+  /* Change this color to your desired dot color */
+  border: 2px solid #fff;
+  /* Add a border to make the dots visible on the track */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  width: 8px;
+  /* Adjust the width */
+  height: 8px;
+  margin-top: -4px;
+  margin-right: 10px;
+  /* Adjust the vertical positioning */
+  // margin-left: -4px;
+}
+
+// .rc-slider-handle {
+//   background-color: #f5222d; /* Change this color to your desired handle color */
+//   border: 2px solid #f5222d; /* Add a border for better visibility */
+//   width: 20px; /* Adjust the width */
+//   height: 20px; /* Adjust the height */
+//   margin-top: -9px; /* Adjust the vertical positioning */
+//   margin-left: -9px; /* Center the handle on the track */
+//   cursor: grab; /* Set cursor style to grab when hovering over the handle */
+// }
+
+.css-6cwnna-MuiSlider-mark {
+  background-color: $G3 !important;
+  width: 2px !important;
+  height: 12px !important;
+  top: 77% !important;
+  border-radius: 0 !important;
+}
+
+.css-1tfve6q-MuiSlider-mark {
+  background-color: $G3 !important;
+  width: 2px !important;
+  height: 12px !important;
+  top: 77% !important;
+  border-radius: 0 !important;
+}
+
+.css-14pt78w-MuiSlider-rail {
+  width: 501px !important;
+  height: 12px !important;
+  border-radius: 11.5px;
+
+  background-color: $G1 !important;
+}
+
+.css-1gv0vcd-MuiSlider-track {
+  width: 501px !important;
+  height: 12px !important;
+  border-radius: 11.5px;
+
+  background-color: $G1 !important;
+  border: 0px !important;
+}
+
+.css-1eoe787-MuiSlider-markLabel {
+  font-family: Jost !important;
+  line-height: 200% !important;
+  font-weight: 200 !important;
+  color: $G3 !important;
+  font-size: 12px !important;
+}
+
+.css-jx1sa5-MuiSlider-thumb {
+  width: 12px !important;
+  height: 12px !important;
+  background-color: $Primary !important;
+}
+
+.css-yafthl-MuiSlider-markLabel {
+  font-family: Jost !important;
+  line-height: 200% !important;
+  font-weight: 200 !important;
+  color: $G3 !important;
+  font-size: 12px !important;
+}
+
+.css-yafthl-MuiSlider-markLabel[data-index="10"] {
+  color: transparent !important;
+}
+
+.css-1tfve6q-MuiSlider-mark[data-index="10"] {
+  background-color: #fff !important;
+}
+
+.css-6cwnna-MuiSlider-mark[data-index="10"] {
+  background-color: transparent !important;
+}
+
+.css-1eoe787-MuiSlider-markLabel[data-index="10"] {
+  color: transparent !important;
+}

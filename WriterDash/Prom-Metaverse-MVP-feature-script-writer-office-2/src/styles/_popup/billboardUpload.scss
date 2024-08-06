@@ -1,0 +1,441 @@
+// .script-upload-container {
+//   background-color: #ffffff;
+//   // width: 800px;
+//   // width: 396px;
+//   // height: 733px;
+//   width: 369px;
+//   // width: calc(100vw - 150px) !important;
+//   // height: 577px;
+//   height: calc(100vh - 150px) !important;
+//   position: fixed;
+//   top: 45%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   border-radius: 22px;
+//   z-index: 5;
+//   overflow-y: scroll;
+
+//   overflow-x: hidden;
+//   box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.3);
+//   @include onTablet {
+//     width: 720px;
+//     height: 820px;
+//     overflow-y: scroll;
+//     overflow-x: hidden;
+//     scroll-behavior: smooth;
+//   }
+
+//   @include onDesktopSmall {
+//     height: 600px;
+//     width: 1300px;
+//     scroll-behavior: smooth;
+//     overflow-x: hidden;
+//     overflow-y: scroll;
+
+//     top: 47%;
+//   }
+//   @include onDesktopBig {
+//     width: 1525px;
+//     height: 916px;
+//   }
+//   &-close {
+//     display: none;
+//   }
+// }
+
+.script-upload-border {
+  width: 100%;
+  height: 42px;
+  background-color: #d39ea4;
+}
+
+// .script-upload-wrapper {
+//   width: 100%;
+//   height: 100%;
+//   display: flex;
+//   // gap: 100px;
+
+//   flex-direction: column;
+//   overflow: hidden;
+//   padding: 35px;
+//   scroll-behavior: smooth;
+//   @include onTablet {
+//     flex-direction: column;
+
+//     padding: 70px;
+//   }
+//   @include onDesktopSmall {
+//     flex-direction: row;
+//   }
+//   @include onDesktopBig {
+//     overflow-y: hidden;
+//   }
+// }
+
+// .script-upload-left-side {
+//   width: 50%;
+// }
+
+// .billboard-upload-primary {
+//   font-family: inherit;
+//   font-weight: 500;
+//   font-size: 16px;
+//   color: #000000;
+// }
+
+// .script-upload-btn-container {
+//   margin-top: 20px;
+//   width: 218px;
+//   height: 36px;
+//   border: 1px solid #979ea9;
+//   border-radius: 11px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   padding: 5px;
+// }
+
+// .script-upload-TvShow-btn,
+// .script-upload-movie-btn {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+//   width: 97px;
+//   height: 26px;
+//   border-radius: 8px;
+//   padding: 0 32px;
+//   font-family: inherit;
+//   font-weight: 500;
+//   font-size: 12px;
+// }
+
+// .script-upload-TvShow-btn {
+//   background-color: none;
+//   color: black;
+// }
+
+// .script-upload-movie-btn {
+//   background-color: #da1820;
+//   color: white;
+// }
+
+// .billboard-upload-movie-container {
+//   margin-top: 50px;
+//   width: 100%;
+// }
+
+// .billboard-upload-movie-input {
+//   width: 300px;
+//   height: 48px;
+//   border-radius: 56px;
+//   border: 1px solid #979ea9;
+//   font-family: inherit;
+//   font-weight: 500;
+//   font-size: 18px;
+//   padding: 8px 17px;
+//   color: #5b6179;
+//   margin-top: 10px;
+//   margin-left: -15px;
+//   @include onTablet {
+//     width: 100%;
+//   }
+// }
+
+// .billboard-upload-movie-selection {
+//   margin-top: 20px;
+//   width: 100%;
+// }
+
+// .billboard-upload-input-container {
+//   width: 97%;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   @include onDesktopSmall {
+//     gap: 20px;
+//   }
+//   @include onTabletBig {
+//     gap: 30px;
+//   }
+// }
+
+// .script-upload-movie-choose {
+//   width: 292px;
+//   height: 48px;
+//   border-radius: 56px;
+//   border: 1px solid #979ea9;
+//   padding: 8px 17px;
+//   margin-left: -15px;
+//   position: relative;
+// }
+
+// .billboard-upload-text-field {
+//   width: 97%;
+//   margin-top: 15px;
+// }
+
+// .billboard-upload-right-side {
+//   width: 50%;
+//   @include onDesktopBig {
+//     width: 50%;
+//   }
+// }
+
+// .billboard-right-side-heading {
+//   margin-top: 30px;
+// }
+
+// .billboard-upload-contributors-btn-container {
+//   width: 631px;
+//   height: 58px;
+//   display: flex;
+//   align-items: center;
+//   flex-direction: column;
+//   gap: 20px;
+//   margin-top: 20px;
+//   border-radius: 7px;
+// }
+
+// .billboard-upload-footer-container {
+//   margin-top: 30px;
+//   display: flex;
+//   align-items: flex-end;
+//   justify-content: flex-end;
+//   width: 100%;
+// }
+
+// .billboard-upload-footer-btn-wrapper {
+//   width: 460px;
+//   gap: 15px;
+//   height: 60px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-end;
+//   position: relative;
+//   @include onDesktopSmall {
+//     align-items: center;
+//     justify-content: center;
+//     margin-top: 60px;
+//   }
+// }
+
+// .billboard-upload-btn--draft,
+// .billboard-upload-btn--upload {
+//   display: flex;
+//   align-items: center;
+//   width: 100%;
+//   border-radius: 38px;
+//   border: 1px solid #b6bac4;
+//   background: none;
+//   padding: 16px 50px;
+//   font-family: "Jost";
+//   font-size: 17px;
+//   font-weight: 600;
+//   white-space: nowrap;
+// }
+// .billboard-upload-btn--uploaded {
+//   display: flex;
+//   align-items: center;
+
+//   width: 245px;
+//   border-radius: 38px;
+//   border: 1px solid #b6bac4;
+//   background: none;
+//   padding: 16px 50px;
+//   font-family: "Jost";
+//   font-size: 17px;
+//   font-weight: 600;
+//   white-space: nowrap;
+// }
+
+// .script-upload-btn--draft {
+//   color: #30374d;
+// }
+
+// .script-upload-btn--upload {
+//   color: #b6bac4;
+// }
+
+// .script-upload-btn--uploaded {
+//   color: #b6bac4;
+//   position: absolute;
+//   right: 0;
+//   top: 0;
+// }
+
+// .billboard-uploaded-wrapper {
+//   width: 591px;
+//   height: 97px;
+//   background-color: #eff3f5;
+//   display: flex;
+//   align-items: center;
+//   justify-content: flex-start;
+//   padding: 30px;
+//   position: relative;
+//   border-radius: 7px;
+// }
+
+// .billboard-uploaded-content {
+//   display: flex;
+// }
+
+// .billboard-uploaded-name {
+//   padding-left: 20px;
+//   font-size: 16px;
+//   font-family: "Jost";
+//   font-weight: 400;
+//   color: #000000;
+// }
+
+// .billboard-uploaded-size {
+//   font-size: 14px;
+//   font-weight: 400;
+//   padding-left: 20px;
+//   color: #6d6d6d;
+// }
+
+// .billboard-uploaded-content-close-icon {
+//   position: absolute;
+//   top: 15px;
+//   right: 15px;
+// }
+
+// .progress-container {
+//   width: 225px;
+//   height: 4px;
+//   border-radius: 2px;
+//   border: 1px solid #ffffff;
+//   overflow: hidden;
+//   @include onDesktopBig {
+//     width: 525px;
+//   }
+// }
+
+// .progress-bar {
+//   height: 100%;
+//   background-color: #da1820;
+// }
+
+// .progress-perc {
+//   position: absolute;
+//   right: 30px;
+//   top: 30px;
+//   font-size: 14px;
+//   font-weight: 400;
+//   font-family: "Jost";
+//   color: #6d6d6d;
+// }
+
+// .hide-pdf-container {
+//   display: none;
+// }
+
+// .thank-you-btn-share {
+//   width: 313px;
+//   height: 51px;
+//   background-color: #dc1720;
+//   border-radius: 38px;
+//   padding: 16px 50px;
+//   color: white;
+//   font-size: 17px;
+//   font-family: "Jost";
+//   font-weight: 600;
+//   margin-bottom: 20px;
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   cursor: pointer;
+// }
+
+// .thank-you-see-script-btn {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   width: 313px;
+//   height: 51px;
+//   background-color: #fff;
+//   border-radius: 38px;
+//   padding: 16px 50px;
+//   color: #30374d;
+//   font-size: 17px;
+//   font-family: "Jost";
+//   font-weight: 600;
+//   margin-bottom: 10px;
+//   border: 1px solid #b6bac4;
+//   cursor: pointer;
+// }
+// .billboard-checkbox[type="checkbox"] {
+//   appearance: none;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+
+//   background-color: transparent;
+
+//   width: 22px;
+//   height: 22px;
+
+//   padding: 0;
+//   margin: 0;
+//   border: 1px solid #b6bac4;
+// }
+
+// .billboard-checkbox[type="checkbox"]:checked {
+//   background-color: #dc1720;
+// }
+
+// .billboard-checkbox[type="checkbox"] {
+//   /* Hide the default checkbox */
+//   appearance: none;
+//   -webkit-appearance: none;
+//   -moz-appearance: none;
+//   background-color: transparent;
+//   width: 22px;
+//   height: 22px;
+
+//   padding: 0;
+//   margin: 0;
+//   border: 1px solid #b6bac4;
+//   position: relative;
+// }
+
+// .billboard-checkbox[type="checkbox"]:checked {
+//   background-color: #dc1720;
+// }
+
+// .billboard-checkbox[type="checkbox"]::before {
+//   content: "\2713";
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   color: #fff;
+//   opacity: 0;
+//   transition: opacity 0.2s ease;
+// }
+
+// .billboard-checkbox[type="checkbox"]:checked::before {
+//   opacity: 1;
+// }
+// .anonymous-wrapper-billboard-ad {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   flex-direction: column;
+//   width: 334px;
+
+//   @include onTabletBig {
+//     margin-top: 0;
+//     flex-direction: row;
+//     width: 610px;
+//     height: 250px;
+//   }
+//   @include onDesktopSmall {
+//     justify-content: flex-start;
+//     flex-direction: row;
+//     margin-top: 40px;
+//     margin-left: 0;
+//     width: 591px;
+//     height: 250px;
+//   }
+// }

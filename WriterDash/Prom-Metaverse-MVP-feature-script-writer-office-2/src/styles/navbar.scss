@@ -1,0 +1,202 @@
+.navbar {
+  position: fixed;
+  bottom: 12px;
+  left: 11%;
+  width: 79%;
+  height: 69px;
+  border-radius: 20px;
+  background: var(--W, #fff);
+  z-index: 4;
+
+  // Mobile Navbar
+  &--mobile {
+    left: 0;
+    bottom: 0;
+    border-radius: 20px 20px 0 0;
+    width: 100%;
+    display: block; // Show by default on mobile
+
+    @include onTablet {
+      display: none; // Hide on tablet and above
+    }
+
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
+
+  // Desktop Navbar
+  &--desktop {
+    display: none; // Hide by default on mobile
+
+    @include onTablet {
+      display: block; // Show on tablet and above
+    }
+  }
+
+  &__img {
+    &-container {
+      transform: translateX(-24px);
+      // width: 60px;
+      // height: 30px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      margin-right: 20px;
+      position: relative;
+      bottom: 10px;
+      background-color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // height: 90px;
+      // width: 90px;
+
+      // @include onTablet {
+      //   position: absolute;
+      //   bottom: -10%;
+      //   left: -30px;
+      //   width: 99px;
+      //   height: 99px;
+      // }
+
+      &--profile {
+        position: relative;
+        bottom: 0;
+        left: 0;
+      }
+    }
+
+    &-content {
+      width: 63px;
+      height: 63px;
+      background-image: url("./assets/userIcon.svg");
+      background-position: center;
+      background-size: cover;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: 4px;
+      border-color: white red red red;
+
+      @include onTablet {
+        width: 84px;
+        height: 84px;
+      }
+
+      &--notification {
+        width: 61px;
+        height: 52px;
+
+        background-image: url("./assets/avatarSmall.svg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 0%;
+
+        margin-right: 28px;
+      }
+
+      &--contact {
+        width: 61px;
+        height: 61px;
+
+        background-image: url("./assets/avatarSmall.svg");
+        background-position: center;
+        background-size: cover;
+        border-radius: 0%;
+      }
+    }
+  }
+
+  &__title {
+    &-container {
+      position: relative;
+      left: 10%;
+      top: 15%;
+    }
+
+    &-text {
+      font-family: Jost;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 20px;
+
+      &--name {
+        color: var(--Primary, #dc1720);
+      }
+
+      &--level {
+        color: var(--Black, #030d2e);
+        font-weight: 400;
+        line-height: 200%;
+      }
+
+      &--next {
+        color: var(--G3, #979ea9);
+      }
+    }
+  }
+
+  &__icons {
+    &-container {
+      margin: 0 auto;
+      display: flex;
+      width: max-content;
+      justify-content: space-between;
+      align-items: center;
+
+      @include onTablet {
+        // width: 400px;
+
+        position: absolute;
+        top: 15%;
+        right: 30px;
+      }
+
+      @include onDesktopSmall {
+        width: 500px;
+      }
+    }
+
+    &-icon {
+      display: flex;
+      width: 42px;
+      height: 42px;
+      padding: 10px;
+      align-items: flex-start;
+      margin-right: 20px;
+      border-radius: 54px;
+      border: 1px solid var(--G2, #b6bac4);
+
+      @include onDesktopSmall {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+
+  &__status {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    bottom: -10px;
+    left: 35px;
+
+    &--profile {
+      bottom: 0;
+      left: 65px;
+    }
+  }
+
+  &__popup {
+    width: 100px;
+    height: 100px;
+    background-color: #b6bac4;
+  }
+}

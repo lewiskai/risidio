@@ -1,0 +1,213 @@
+.onboarding-message {
+  position: relative;
+  border-radius: 37px;
+  background-color: #fff;
+  top: 20%;
+  left: 25%;
+  z-index: 4;
+
+  &--0 {
+    max-width: 677px;
+    width: 90vw;
+    max-height: 330px;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include onTablet {
+      width: 677px;
+      height: 312px;
+    }
+  }
+
+  &--1 {
+    max-width: 667px;
+    width: 90vw;
+    max-height: 412px;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    @include onTablet {
+      top: 45%;
+      left: 7%;
+    }
+    @include onTabletBig {
+      left: 46%;
+      top: 62%;
+    }
+    @include onDesktopSmall {
+      left: 35%;
+      top: 45%;
+    }
+    @include onDesktopBig {
+      left: 25%;
+      top: 64%;
+    }
+
+    @media screen and (min-width: 768px) {
+      left: 8%;
+      top: 17%;
+      transform: none;
+    }
+  }
+
+  &--2 {
+    max-width: 667px;
+    width: 90vw;
+    max-height: 296px;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include onTablet {
+      top: 70%;
+      left: 53%;
+    }
+    @include onTabletBig {
+      left: 53%;
+      top: 71%;
+    }
+    @include onDesktopSmall {
+      left: 65%;
+      top: 55%;
+    }
+    @include onDesktopBig {
+      top: 74%;
+      left: 75%;
+    }
+
+    @media screen and (min-width: 768px) {
+      top: 60%;
+      left: 64%;
+   
+  }
+  }
+
+  &--3 {
+    max-width: 667px;
+    width: 90vw;
+    max-height: 301px;
+    height: 90vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include onTablet {
+
+      width: 677px;
+      height: 317px;
+      top: 46%;
+      left: 47%;
+
+    }
+    @include onTabletBig {
+      left: 45%;
+      top: 52%;
+    }
+    @include onDesktopSmall {
+      left: 42%;
+      top: 55%;
+    }
+    @include onDesktopBig {
+      left: 44%;
+      top: 53%;
+    }
+    @media screen and (min-width: 768px) {
+      left: 35%;
+      top: 55%;
+   
+  }
+  }
+
+  &--4 {
+    display: none;
+  }
+
+  &-title {
+    font-family: Jost;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: $Primary;
+    @include onTablet {
+      font-size: 32px;
+      text-align: left;
+    }
+  }
+
+  &-message {
+    font-family: Jost;
+    font-size: 14px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 200%;
+    text-align: center;
+    @include onTablet {
+      font-size: 16px;
+      text-align: left;
+    }
+  }
+
+  &-img {
+    width: 121px;
+    height: 121px;
+    border-radius: 50%;
+
+    position: absolute;
+
+    left: 121px;
+    top: -73px;
+    @include onTablet {
+      left: -46px;
+      top: 20px;
+      width: 100px;
+      height: 100px;
+    }
+    @include onTabletBig {
+      left: -65px;
+      top: 20px;
+      width: 130px;
+      height: 130px;
+    }
+
+    background-image: url("./assets/welcomeAvatar.svg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  &-container {
+    @include onTablet {
+      padding: 80px 79px 5px 150px;
+    }
+
+    padding: 60px;
+  }
+
+  &__buttons {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+z-index: 1;
+    position: absolute;
+    right: 41px;
+    bottom: 53px;
+    @include onTablet {
+      bottom: 15px;
+      right: 20px;
+    }
+
+    &-button {
+      width: 51px;
+      height: 51px;
+      background-color: $Primary !important;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+  }
+}

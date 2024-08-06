@@ -1,0 +1,572 @@
+.script-upload-container {
+  font-family: "Jost";
+  background-color: #ffffff;
+  // width: 800px;
+  // width: 450px;
+  // height: 733px;
+  width: 369px;
+  // height: 577px;
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 22px;
+  z-index: 5;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: calc(100vh - 150px) !important;
+
+  @include onTablet {
+    width: 720px;
+    height: 820px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+
+  @include onDesktopSmall {
+    height: 600px;
+    width: 1300px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+    overflow-y: scroll;
+
+    top: 47%;
+  }
+  @include onDesktopBig {
+    width: 1525px;
+    height: 916px;
+  }
+  &-close {
+    display: none;
+  }
+}
+.script_upload_form {
+  overflow-y: scroll;
+  // height: calc(100vh - 150px) !important;
+  height: 100%;
+}
+.script-upload-container {
+  /* Other styles for .script-upload-wrapper */
+  overflow: hidden; /* Hide the default scrollbar */
+}
+
+/* Width of the scrollbar */
+.script-upload-container::-webkit-scrollbar {
+  width: 10px; /* Adjust as needed */
+  display: none;
+}
+
+/* Background color of the scrollbar track */
+.script-upload-container::-webkit-scrollbar-track {
+  background-color: transparent; /* Make scrollbar track transparent */
+}
+
+/* Color and shape of the scrollbar thumb */
+.script-upload-container::-webkit-scrollbar-thumb {
+  background-color: #bdbdbd; /* Replace with your desired color */
+  border-radius: 5px; /* Adjust as needed */
+}
+
+/* Content inside the container */
+.script-upload-container-content {
+  overflow-y: auto; /* Show scrollbar when content overflows vertically */
+  padding-right: 10px; /* Add padding to prevent content from being obscured by scrollbar */
+}
+
+.script-upload-border {
+  width: 20%;
+  height: 22px;
+  background-color: #d39ea4;
+}
+
+.script-upload-wrapper {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  column-gap: 95px;
+  overflow: scroll;
+  padding: 35px 20px;
+  @include onTablet {
+    padding: 35px;
+    // padding: 70px;
+    overflow-y: scroll;
+  }
+  @include onDesktopSmall {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 60px 90px;
+    // flex-direction: row;
+    overflow-y: scroll;
+  }
+  @include onDesktopBig {
+    overflow-y: hidden;
+  }
+}
+
+.script-uploaded-wrapper {
+  // width: 330px;
+  // height: 97px;
+  background-color: #eff3f5;
+  // display: flex;
+  // align-items: center;
+  // justify-content: flex-start;
+  margin-bottom: 30px;
+  padding: 30px;
+  position: relative;
+  border-radius: 7px;
+  @include onTabletBig {
+    width: 590px;
+  }
+  @include onDesktopBig {
+    width: 591px;
+  }
+}
+
+.script-upload-left-side {
+  // width: 50%;
+  // width: 335px;
+  // width: 308px;
+
+  @include onTablet {
+    width: 100%;
+  }
+
+  @include onDesktopSmall {
+    width: 100%;
+  }
+}
+
+.script-upload-primary {
+  font-family: "Jost";
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 30px;
+  @include onTablet {
+    // font-size: 24px;
+    font-size: 20px;
+  }
+}
+.script_upload_input_titles {
+  display: block;
+  font-family: "Jost";
+  margin-bottom: 5px;
+  margin-left: 13px;
+}
+.script-upload-btn-container {
+  width: 218px;
+  height: 36px;
+  border: 1px solid #979ea9;
+  border-radius: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.script-upload-TvShow-btn,
+.script-upload-movie-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 97px;
+  height: 26px;
+  border-radius: 8px;
+  padding: 0 32px;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.script-upload-TvShow-btn {
+  background-color: none;
+  color: black;
+}
+
+.script-upload-movie-btn {
+  background-color: #da1820;
+  color: white;
+}
+
+.script-upload-movie-container {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.script-upload-movie-input {
+  border-radius: 56px;
+  font-size: 14px;
+  width: 100%;
+  font-family: inherit;
+  padding: 8px 17px;
+  margin-top: 5px;
+  @include onTablet {
+    width: 100%;
+  }
+  @include onDesktopSmall {
+    width: 100%;
+  }
+}
+
+.script-upload-movie-selection {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.script-upload-input-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.script-upload-movie-choose {
+  width: 292px;
+  height: 48px;
+  border-radius: 56px;
+  border: 1px solid #979ea9;
+  padding: 8px 17px;
+  margin-left: -15px;
+  position: relative;
+}
+
+.script-upload-text-field {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.script-upload-right-side {
+  width: 100%;
+  @include onTablet {
+    width: 100%;
+  }
+  @include onDesktopSmall {
+    width: 100%;
+  }
+}
+
+.script-upload-contributors-btn-container {
+  height: 58px;
+  // width: 334px;
+  background-color: #e8ebef;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  border-radius: 7px;
+}
+
+.script-upload-footer-container {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  @include onDesktopSmall {
+    justify-content: flex-end;
+  }
+}
+
+.script-upload-footer-btn-wrapper {
+  width: 227px;
+  gap: 15px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  // margin-right: -200px;
+  position: relative;
+
+  @include onTabletBig {
+    width: 335px;
+
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 0px;
+  }
+  @include onDesktopSmall {
+    flex-direction: row;
+    margin-right: 60px;
+  }
+}
+
+.script-upload-btn--draft,
+.script-upload-btn--upload {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 81%;
+  border-radius: 38px;
+  border: 1px solid #b6bac4;
+  background: none;
+  padding: 10px 20px;
+  font-family: "Jost";
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+  @include onTablet {
+    padding: 16px 50px;
+  }
+  @include onDesktopSmall {
+    margin-right: 100px;
+    width: 70%;
+    margin-right: 0;
+    justify-content: space-between;
+  }
+}
+.script-upload-btn--uploaded {
+  display: flex;
+  align-items: center;
+  width: 245px;
+  border-radius: 38px;
+  border: 1px solid #b6bac4;
+  background: none;
+  padding: 16px 50px;
+  font-family: "Jost";
+  font-size: 17px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.script-upload-btn--draft {
+  color: #30374d;
+}
+
+.script-upload-btn--upload {
+  color: #b6bac4;
+}
+
+.script-upload-btn--uploaded {
+  color: #b6bac4;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.script-uploaded-content {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.script-uploaded-name {
+  padding-left: 20px;
+  font-size: 16px;
+  font-family: "Jost";
+  font-weight: 400;
+  color: #000000;
+}
+
+.script-uploaded-size {
+  font-size: 14px;
+  font-weight: 400;
+  padding-left: 20px;
+  color: #6d6d6d;
+}
+
+.script-uploaded-content-close-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.progress-container {
+  // width: 225px;
+  height: 4px;
+  border-radius: 2px;
+  border: 1px solid #ffffff;
+  background-color: #ffff;
+  overflow: hidden;
+  @include onDesktopBig {
+    width: 525px;
+  }
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #da1820;
+  width: 80%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #dc1720;
+}
+
+.progress-perc {
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Jost";
+  color: #6d6d6d;
+}
+
+.hide-pdf-container {
+  display: none;
+}
+
+.thank-you-btn-share {
+  width: 313px;
+  height: 51px;
+  background-color: #dc1720;
+  border-radius: 38px;
+  padding: 16px 50px;
+  color: white;
+  font-size: 17px;
+  font-family: "Jost";
+  font-weight: 600;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.thank-you-see-script-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 313px;
+  height: 51px;
+  background-color: #fff;
+  border-radius: 38px;
+  padding: 16px 50px;
+  color: #30374d;
+  font-size: 17px;
+  font-family: "Jost";
+  font-weight: 600;
+  margin-bottom: 10px;
+  border: 1px solid #b6bac4;
+  cursor: pointer;
+}
+.synopsis-textarea {
+  // width: 336px;
+  width: 100%;
+  height: 250px;
+
+  @include onDesktopSmall {
+    height: 254px;
+  }
+}
+
+.file_upload {
+  // width: 100%;
+  height: 254px;
+  // margin-right: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px dashed #939393;
+  border-radius: 10px;
+  margin-bottom: 30px;
+
+  @include onTabletBig {
+  }
+  @include onDesktopSmall {
+    // width: 100%;
+    margin-bottom: 30px;
+
+    height: 350px;
+    // margin-right: 200px;
+  }
+  &_cover {
+    @include onDesktopSmall {
+      height: 240px;
+    }
+  }
+}
+.anonymous-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // width: 334px;
+  width: 100%;
+  @include onTabletBig {
+    margin-top: 0;
+    flex-direction: row;
+    width: 590px;
+  }
+  @include onDesktopSmall {
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 0;
+    width: 100%;
+    // width: 391px;
+  }
+  &-container {
+    width: 100%;
+    flex-direction: column;
+    @include onTablet {
+      width: 100%;
+    }
+    @include onDesktopSmall {
+      flex-direction: row;
+      width: 100%;
+    }
+  }
+}
+.label-ano {
+  flex-direction: column;
+  @include onTabletBig {
+    flex-direction: row;
+    margin-top: 0;
+  }
+  @include onDesktopSmall {
+    flex-direction: row;
+    width: 491px;
+  }
+}
+.status-input {
+  width: 100%;
+  padding: 8px 17px;
+}
+.gener-input {
+  // width: 150px;
+  // height: 48px;
+  // width: 154px;
+  width: 100%;
+  padding: 8px 17px;
+  @include onTablet {
+    // width: 280px;
+    // width: 310px;
+  }
+  @include onDesktopSmall {
+    // width: 192px;
+  }
+  @include onDesktopBig {
+    // width: 292px;
+  }
+}
+.choose-genre-text {
+  font-size: 14px;
+
+  @include onDesktopBig {
+    font-size: 18px;
+  }
+}
+.choose-status-text {
+  font-size: 14px;
+  @include onDesktopBig {
+    font-size: 18px;
+  }
+}
+.status-arrow {
+  display: none;
+  margin-right: 10px;
+  @include onDesktopBig {
+    display: block;
+  }
+}
+
+.upload-img-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.dot {
+  height: 30px;
+  width: 30px;
+}

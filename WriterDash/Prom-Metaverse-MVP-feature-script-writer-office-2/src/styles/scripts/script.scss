@@ -1,0 +1,631 @@
+@font-face {
+  font-family: "Inconsolata", monospace;
+  src: url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+}
+.script {
+  width: 369px;
+  height: calc(100vh - 200px);
+  border-radius: 20px 20px 24px 24px;
+  z-index: 5;
+  position: relative;
+  margin: 0 auto;
+  top: -50px;
+  // overflow: scroll;
+
+  @include onTablet {
+    // width: 800px;
+    width: calc(100vw - 200px);
+    // overflow: hidden;
+  }
+  @include onDesktopSmall {
+    // width: 1300px;
+  }
+  @include onDesktopBig {
+    max-width: 1525px;
+  }
+
+  &-page {
+    position: relative;
+    background-color: $PrimaryD;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  &__top {
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 20px 20px 0px 0px;
+
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16.149999618530273px);
+    padding: 20px;
+    color: #030d2e;
+    font-family: Jost;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 20px;
+    @include onTablet {
+      padding: 14px 29px 14px 29px;
+    }
+  }
+
+  &__main {
+    // padding-left: 108px;
+    display: flex;
+    background: var(--W, #fff);
+    flex-direction: column;
+    box-shadow: 0px 4px 55.4px 0px rgba(0, 0, 0, 0.64);
+    border-radius: 0px 0px 20px 20px;
+    // height: calc(100vh - 150px);
+    height: 100%;
+    overflow-y: scroll;
+    @include onTablet {
+      flex-direction: column;
+      // overflow: hidden;
+      // overflow-y: scroll;
+    }
+    @include onTabletBig {
+      flex-direction: row;
+      overflow: hidden;
+      padding-left: 0;
+      // gap: 92px;
+    }
+    @include onDesktopSmall {
+      // width: 1300px;
+      padding: 0 50px;
+      // padding-left: 108px;
+    }
+    @include onDesktopBig {
+      // height: 897px;
+    }
+  }
+
+  &__left {
+    flex-shrink: 0;
+
+    padding: 40px 30px;
+    padding-top: 50px !important;
+    background: linear-gradient(193deg, #fff0f0 1.28%, #f8faff 99.68%);
+
+    @include onTablet {
+      // width: 469px;
+      // padding: 21px 42px 21px;
+      padding: 70px 50px;
+    }
+    @include onDesktopSmall {
+      background: linear-gradient(193deg, #f3f8fe 1.28%, #fdf8eb 99.68%);
+      padding: 20px;
+      width: 350px;
+      padding: 40px 30px;
+    }
+    @include onDesktopBig {
+      padding: 81px 42px 21px;
+      // height: 897px;
+      width: 474px;
+      padding: 61px 42px 21px;
+    }
+
+    &-title {
+      // font-family: Jost;
+      // font-family: "Inconsolata", monospace;
+
+      font-size: 20px;
+      line-height: 20px;
+      letter-spacing: 1.2px;
+      text-align: left;
+      color: #030d2e;
+      // margin-bottom: 10px;
+
+      @include onTabletBig {
+        margin-bottom: 20px;
+        // font-size: 38px;
+        font-size: 28px;
+        font-weight: 400;
+      }
+
+      @include onDesktopBig {
+        font-size: 48px;
+        margin-bottom: 26px;
+      }
+
+      &--pronoun {
+        font-size: 16px;
+      }
+
+      &--author {
+        font-family: Insonsolata;
+        font-size: 20px;
+        font-weight: 400;
+        color: $Primary;
+        text-decoration: underline;
+      }
+    }
+
+    &-list {
+      display: flex;
+      gap: 17px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      // font-weight: 300;
+      @include onTabletBig {
+        font-size: 16px;
+      }
+      @include onDesktopBig {
+        margin-bottom: 27px;
+      }
+    }
+
+    &-button {
+      display: flex;
+      justify-content: center;
+      &-public {
+        display: block;
+        margin: 0 auto;
+        width: 252px;
+        height: 51px;
+        padding: 0;
+      }
+    }
+
+    &-item {
+      color: black;
+      position: relative;
+      margin-right: 8px;
+      // line-height: 20%;
+      text-transform: capitalize;
+
+      @include onTabletBig {
+        font-weight: 500;
+      }
+
+      &::before {
+        content: "\2022";
+        position: absolute;
+        left: -16px;
+      }
+
+      &:first-child::before {
+        content: none;
+      }
+    }
+
+    &-imgContainer {
+      width: 100%;
+      height: 300px;
+
+      margin: 0 auto;
+      margin-bottom: 30px;
+
+      @include onTablet {
+        // height: 650px;
+        margin-bottom: 50px;
+      }
+      @include onDesktopSmall {
+        // height: 350px;
+      }
+
+      @include onDesktopBig {
+        // height: 1000px;
+        width: 389px;
+
+        margin-bottom: 40px;
+      }
+
+      &-img {
+        width: 100%;
+        height: 100%;
+        background-position: center;
+        object-fit: cover;
+      }
+    }
+  }
+
+  &__right {
+    width: 100%;
+    padding: 40px 30px;
+    // &::-webkit-scrollbar-thumb {
+    //   height: 10%;
+    // }
+    @include onTablet {
+      padding: 70px 50px;
+    }
+    @include onTabletBig {
+      overflow-y: auto;
+    }
+    @include onDesktopSmall {
+      padding: 50px;
+      // padding-left: 0 !important ;
+      padding-left: 90px;
+    }
+    @include onDesktopBig {
+      // padding: 141px;
+    }
+
+    &--not-owner {
+      padding: 40px 50px;
+
+      @include onDesktopBig {
+        padding: 40px 106px;
+      }
+    }
+
+    &-button {
+      border-radius: 5px !important;
+      font-weight: 400 !important;
+      width: 127px;
+      height: 26px;
+      padding: 0;
+
+      &--share {
+        width: 145px;
+        height: 51px;
+        padding: 0;
+      }
+
+      &-container {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        margin-top: 30px;
+        position: relative;
+
+        &-header {
+          margin-top: 0;
+          margin-bottom: 10px;
+        }
+        &-settings {
+          width: 208px;
+          height: 119px;
+          background-color: #fff;
+          border-radius: 11px;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+          padding: 14px 7px 0;
+          position: absolute;
+          z-index: 1;
+          top: 0;
+          left: 0;
+          top: 200px;
+
+          &-option {
+            font-family: Jost;
+            font-size: 13px;
+            width: 100%;
+            border-radius: 7px;
+            line-height: 200%;
+            margin-bottom: 5px;
+            transition: all 0.3s;
+
+            &:hover {
+              background-color: $G1;
+            }
+          }
+        }
+      }
+
+      // &--settings {
+      //   position: relative;
+      // }
+    }
+
+    &-title {
+      font-family: Jost;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 200%;
+      color: #030d2e;
+      text-align: left;
+      // margin-bottom: 10px;
+      @include onTabletBig {
+        // margin-bottom: 31px;
+      }
+
+      &--head {
+        font-weight: 500;
+      }
+      &--main {
+        font-size: 20px;
+        line-height: 20px;
+        text-transform: capitalize;
+        margin-bottom: 20px;
+        @include onTabletBig {
+          font-weight: 500;
+          font-size: 24px;
+        }
+      }
+
+      &--underline {
+        color: #030d2e;
+        text-decoration: underline;
+      }
+      &--contributor {
+        color: #030d2e;
+      }
+    }
+
+    &-summary {
+      position: relative;
+
+      margin-bottom: 90px;
+
+      &::after {
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: #b6bac4;
+        position: absolute;
+        margin-top: 30px;
+      }
+
+      &-description {
+        text-align: left;
+        margin: 0;
+        font-family: Jost;
+        color: #030d2e;
+        font-weight: 400;
+        line-height: 32px;
+
+        font-size: 14px;
+        @include onTabletBig {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-review {
+      font-family: Jost;
+      color: #7c8db0;
+      font-size: 18px;
+      font-weight: 300;
+
+      &-text {
+        font-size: 14px;
+
+        @include onTabletBig {
+          font-size: 16px;
+        }
+      }
+    }
+
+    &-header {
+      display: flex;
+      flex-direction: column;
+      // margin-bottom: 40px;
+      @include onTabletBig {
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+      }
+
+      &--not-owner {
+        justify-content: flex-end;
+        // position: absolute;
+      }
+    }
+
+    &-reviews {
+      &-info {
+        letter-spacing: 7%;
+        font-size: 24px;
+        color: $G4;
+        line-height: 200%;
+        font-weight: 300;
+      }
+
+      &-top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 20px;
+        gap: 17px;
+
+        @include onDesktopSmall {
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          gap: 0;
+          margin-bottom: 47px;
+        }
+      }
+
+      &-button {
+        height: 26px;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        display: block;
+        border-radius: 8px;
+        padding: 0 5% 0;
+
+        font-size: 14px;
+        font-weight: 500;
+        @include onDesktopSmall {
+          padding: 0 8% 0;
+        }
+
+        &--active {
+          color: #fff;
+          background-color: $Primary;
+        }
+
+        &-container {
+          width: 100%;
+          height: 36px;
+          border-radius: 11px;
+          border: 1px solid $G2;
+          display: flex;
+          padding: 5px;
+
+          @include onDesktopSmall {
+            width: 364px;
+          }
+          // justify-content: space-between;
+        }
+      }
+    }
+  }
+
+  &__public {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    @include onTablet {
+      width: 350px;
+      margin-top: 0;
+    }
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      &--right {
+        align-items: center;
+      }
+    }
+
+    &-stars {
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    &-text {
+      font-family: Jost;
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 500;
+      text-transform: capitalize;
+
+      &--rate {
+        font-weight: 600;
+      }
+
+      &--votes {
+        font-size: 12px;
+        font-weight: 300;
+        color: $G4;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &__request {
+    display: flex;
+    align-items: center;
+    font-family: Jost;
+    font-size: 16px;
+    line-height: 200%;
+    font-weight: 300;
+
+    position: relative;
+    margin-bottom: 26px;
+    // margin-top: 20px;
+    @include onTablet {
+    }
+    &-text {
+      font-weight: 400;
+    }
+
+    &-images {
+      display: inline-flex;
+
+      &-img {
+        width: 40px;
+        height: 40px;
+        background-image: url("./assets/avatarVerySmall.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:not(:first-child) {
+          margin-left: -10px;
+        }
+      }
+
+      &-amount {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        border-radius: 50%;
+        margin-left: -10px;
+      }
+    }
+
+    &-button {
+      margin-left: 10px;
+      text-decoration: underline;
+    }
+  }
+
+  &__collaborator {
+    position: absolute;
+    z-index: 1;
+    padding: 31px 16px 31px 16px;
+    height: 418px;
+    width: 305px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 32.7px 0px rgba(0, 0, 0, 0.11);
+    top: 50px;
+    left: 0;
+    @include onDesktopSmall {
+      width: 420px;
+      top: 50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &-search {
+      width: 100%;
+    }
+
+    &-main {
+      overflow-y: scroll;
+      height: 320px;
+      margin-top: 15px;
+    }
+
+    &-card {
+      display: flex;
+      position: relative;
+      margin-bottom: 10px;
+      &-img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background-image: url("./assets/avatarSmall.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin-right: 5px;
+      }
+
+      &-text {
+        font-family: Jost;
+        font-size: 16px;
+        font-weight: 300;
+        margin: 0;
+
+        &--main {
+          color: $Primary;
+          font-weight: 400;
+        }
+      }
+
+      &-button {
+        width: 105px;
+        height: 39px;
+        padding: 0;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+}
